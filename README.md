@@ -17,7 +17,8 @@ npm i -D go-faast/faast-ts-config
   "extends": "faast-ts-config/tsconfig.library.json",
   "compilerOptions": {
     "outDir": "dist/lib",
-    "declarationDir": "dist/types"
+    "declarationDir": "dist/types",
+    "baseUrl": "."
   },
   "include": [
     "src"
@@ -43,6 +44,9 @@ npm i -D go-faast/faast-ts-config
 ```json
 {
   "extends": "faast-ts-config/tsconfig.server.json",
+  "compilerOptions": {
+    "baseUrl": "."
+  },
   "include": [
     "src"
   ]
@@ -67,6 +71,9 @@ npm i -D go-faast/faast-ts-config
 ```json
 {
   "extends": "faast-ts-config/tsconfig.react.json",
+  "compilerOptions": {
+    "baseUrl": "."
+  },
   "include": [
     "src"
   ]
