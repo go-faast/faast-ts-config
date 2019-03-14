@@ -1,0 +1,19 @@
+{
+  "name": "faast-ts-config",
+  "version": "1.0.0",
+  "description": "Commong typescript config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/go-faast/faast-ts-config.git"
+  },
+  "author": "Dylan Seago <dylan@bitaccess.co>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/go-faast/faast-ts-config/issues"
+  },
+  "homepage": "https://github.com/go-faast/faast-ts-config#readme",
+  "dependencies": {
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^8.0.1"
+  }
+}
