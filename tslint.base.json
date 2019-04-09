@@ -33,7 +33,8 @@
         "timeEnd",
         "trace"
       ]
-    }
+    },
+    "await-promise": [true, "Bluebird", "Thenable"]
   }
 }
 
