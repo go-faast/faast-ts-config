@@ -10,6 +10,9 @@
     "quotemark": [true, "single", "jsx-single", "avoid-escape", "avoid-template"],
     "semicolon": false,
     "ordered-imports": false,
+    "comment-format": {
+      "severity": "warning"
+    },
     "no-empty": false,
     "object-literal-sort-keys": false,
     "interface-name": [true, "never-prefix"],
