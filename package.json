@@ -1,5 +1,5 @@
 {
-  "name": "faast-ts-config",
+  "name": "@faast/ts-config",
   "version": "1.0.3",
   "description": "Commong typescript config",
   "repository": {
@@ -12,8 +12,25 @@
     "url": "https://github.com/go-faast/faast-ts-config/issues"
   },
   "homepage": "https://github.com/go-faast/faast-ts-config#readme",
-  "dependencies": {
+  "peerDependencies": {
+    "tslint": ">=5.0.0",
+    "typescript": ">=3.0.0",
+    "typedoc": "^0.14.2"
+  },
+  "devDependencies": {
+    "@types/lodash.camelcase": "^4.3.6",
+    "@types/rollup-plugin-json": "^3.0.2",
+    "@types/rollup-plugin-sourcemaps": "^0.4.1",
+    "lodash.camelcase": "^4.3.0",
+    "rollup-plugin-commonjs": "^9.1.8",
+    "rollup-plugin-json": "^3.1.0",
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-typescript2": "^0.18.0",
     "tslint-config-prettier": "^1.18.0",
-    "tslint-config-standard": "^8.0.1"
+    "tslint-config-standard": "^8.0.1",
+    "tslint": "^5.16.0",
+    "typedoc": "^0.14.2",
+    "typescript": "^3.4.5"
   }
 }

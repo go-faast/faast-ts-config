@@ -1,6 +1,6 @@
 # faast-ts-config
 
-Common typescript configs
+Common typescript config
 
 ## Usage
 
