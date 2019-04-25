@@ -12,6 +12,10 @@
     "url": "https://github.com/go-faast/faast-ts-config/issues"
   },
   "homepage": "https://github.com/go-faast/faast-ts-config#readme",
+  "scripts": {
+    "preversion": "./base/bin/preversion.sh",
+    "postversion": "git push && git push --tags"
+  },
   "peerDependencies": {
     "tslint": ">=5.0.0",
     "typescript": ">=3.0.0",
