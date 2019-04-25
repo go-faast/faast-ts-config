@@ -27,14 +27,10 @@
     "postversion": "git push && git push --tags"
   },
   "devDependencies": {
-    "@types/lodash.camelcase": "^4.3.6",
+    "@faast/ts-config": "github:go-faast/faast-ts-config",
     "@types/jest": "^23.3.2",
-    "@types/lodash": "^4.14.123",
     "@types/node": "^10.11.0",
-    "@types/rollup-plugin-json": "^3.0.2",
-    "@types/rollup-plugin-sourcemaps": "^0.4.1",
     "coveralls": "^3.0.2",
-    "faast-ts-config": "github:go-faast/faast-ts-config",
     "jest": "^23.6.0",
     "jest-config": "^23.6.0",
     "lint-staged": "^8.0.0",
