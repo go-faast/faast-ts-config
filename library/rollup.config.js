@@ -1,17 +1,17 @@
-import resolve from 'rollup-plugin-node-resolve'
-import commonjs from 'rollup-plugin-commonjs'
-import sourceMaps from 'rollup-plugin-sourcemaps'
-import typescript from 'rollup-plugin-typescript2'
-import json from 'rollup-plugin-json'
-import camelCase from 'lodash.camelcase'
+const resolve = require('rollup-plugin-node-resolve')
+const commonjs = require('rollup-plugin-commonjs')
+const sourceMaps = require('rollup-plugin-sourcemaps')
+const typescript = require('rollup-plugin-typescript2')
+const json = require('rollup-plugin-json')
+const camelCase = require('lodash.camelcase')
 
-
-export default (pkg: any) => {
-  const external = Object.keys({
-    ...pkg.dependencies,
-    ...pkg.peerDependencies,
-    ...pkg.devDependencies,
-  })
+module.exports = function (pkg) {
+  const external = Object.keys(Object.assign(
+    {},
+    pkg.dependencies,
+    pkg.peerDependencies,
+    pkg.devDependencies,
+  ))
   return {
     input: 'src/index.ts',
     output: [
