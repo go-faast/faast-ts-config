@@ -8,85 +8,55 @@ Common typescript config
 npm i -D go-faast/faast-ts-config
 ```
 
-### For Libraries
+Extend the files needed.
 
-`tsconfig.json`:
+### Examples
+
+`jest.config.js`
+
+```javascript
+const base = require('@faast/ts-config/lib/library/jest.config.js')
+
+module.exports = Object.assign({}, base, {
+  // overrides here
+})
+```
+
+`tsconfig.json`
 
 ```json
 {
-  "extends": "faast-ts-config/tsconfig.library.json",
+  "extends": "@faast/ts-config/lib/library/tsconfig.json",
   "compilerOptions": {
+    "baseUrl": ".",
     "outDir": "dist/lib",
     "declarationDir": "dist/types",
-    "baseUrl": "."
+    "paths": {
+      "#/*": ["./src/*"],
+    }
   },
-  "include": [
-    "src"
-  ]
+  "exclude": ["node_modules", "dist"]
 }
 ```
 
-`tslint.json`:
+## Templates
 
-```json
-{
-  "extends": [
-    "faast-ts-config/tslint.library.json"
-  ]
-}
+To initialize a new project from scratch copy the entire template directory. If migrating an existing project you'll need to copy over only desired files manually to avoid overwriting src and package.json.
 
+### For Libraries
+
+```bash
+cp -r ./template/library/. /path/to/empty/project
 ```
 
 ### For Servers
 
-`tsconfig.json`:
-
-```json
-{
-  "extends": "faast-ts-config/tsconfig.server.json",
-  "compilerOptions": {
-    "baseUrl": "."
-  },
-  "include": [
-    "src"
-  ]
-}
-```
-
-`tslint.json`:
-
-```json
-{
-  "extends": [
-    "faast-ts-config/tslint.server.json"
-  ]
-}
-
+```bash
+cp -r ./template/server/. /path/to/empty/project
 ```
 
 ### For React Frontends (using webpack)
 
-`tsconfig.json`:
-
-```json
-{
-  "extends": "faast-ts-config/tsconfig.react.json",
-  "compilerOptions": {
-    "baseUrl": "."
-  },
-  "include": [
-    "src"
-  ]
-}
-```
-
-`tslint.json`:
-
-```json
-{
-  "extends": [
-    "faast-ts-config/tslint.react.json"
-  ]
-}
-
+```bash
+cp -r ./template/react/. /path/to/empty/project
 ```
