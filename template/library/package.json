@@ -1,4 +1,7 @@
 {
+  "name": "faast-ts-config-library-template",
+  "version": "0.0.1",
+  "description": "Template for typescript library",
   "main": "dist/index.umd.js",
   "module": "dist/index.es5.js",
   "typings": "dist/types/index.d.ts",
