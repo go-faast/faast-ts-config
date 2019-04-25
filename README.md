@@ -15,7 +15,7 @@ Extend the files needed.
 `jest.config.js`
 
 ```javascript
-const base = require('@faast/ts-config/lib/library/jest.config.js')
+const base = require('@faast/ts-config/library/jest.config.js')
 
 module.exports = Object.assign({}, base, {
   // overrides here
@@ -26,7 +26,7 @@ module.exports = Object.assign({}, base, {
 
 ```json
 {
-  "extends": "@faast/ts-config/lib/library/tsconfig.json",
+  "extends": "@faast/ts-config/library/tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
     "outDir": "dist/lib",

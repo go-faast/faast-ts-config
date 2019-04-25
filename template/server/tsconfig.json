@@ -1,5 +1,5 @@
 {
-  "extends": "@faast/ts-config/lib/server/tsconfig.json",
+  "extends": "@faast/ts-config/server/tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {

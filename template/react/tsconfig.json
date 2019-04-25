@@ -1,5 +1,5 @@
 {
-  "extends": "@faast/ts-config/lib/react/tsconfig.json",
+  "extends": "@faast/ts-config/react/tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
