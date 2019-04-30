@@ -11,6 +11,7 @@ compiled/
 .rpt2_cache
 *.password
 *.wallet
-dist/
-docs/
 *.key
+
+template/
+.editorconfig
