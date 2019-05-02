@@ -5,6 +5,12 @@ const typescript = require('rollup-plugin-typescript2')
 const json = require('rollup-plugin-json')
 const camelCase = require('lodash.camelcase')
 
+const requiredFieldSuggestions = {
+  main: 'dist/index.cjs.js',
+  module: 'dist/index.es.js',
+  browser: 'dist/index.umd.js',
+}
+
 module.exports = function (pkg) {
   const external = Object.keys(Object.assign(
     {},
@@ -12,8 +18,14 @@ module.exports = function (pkg) {
     pkg.peerDependencies,
     pkg.devDependencies,
   ))
+  Object.keys(requiredFieldSuggestions).forEach((field) => {
+    if (!pkg[field]) {
+      throw new Error(`Missing package.json ${field} field. Consider using ${requiredFieldSuggestions[field]}`)
+    }
+  })
+  const entry = 'src/index.ts'
   return {
-    input: 'src/index.ts',
+    input: entry,
     output: [
       { file: pkg.main, format: 'cjs', sourcemap: true },
       { file: pkg.module, format: 'es', sourcemap: true },
@@ -28,7 +40,10 @@ module.exports = function (pkg) {
       // Allow json resolution
       json(),
       // Compile TypeScript files
-      typescript({ useTsconfigDeclarationDir: true, tsconfig: './tsconfig.build.json' }),
+      typescript({
+        useTsconfigDeclarationDir: true,
+        tsconfig: './tsconfig.build.json',
+      }),
       // Allow bundling cjs modules (unlike webpack, rollup doesn't understand cjs)
       commonjs(),
       // Allow node_modules resolution, so you can use 'external' to control
