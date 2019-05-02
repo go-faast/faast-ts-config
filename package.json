@@ -14,7 +14,8 @@
   "homepage": "https://github.com/go-faast/faast-ts-config#readme",
   "scripts": {
     "preversion": "./base/bin/preversion.sh",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "release": "npm publish --access=public"
   },
   "dependencies": {
     "tslint-config-prettier": "^1.18.0",

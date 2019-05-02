@@ -15,8 +15,9 @@ module.exports = function (pkg) {
   return {
     input: 'src/index.ts',
     output: [
-      { file: pkg.browser, name: camelCase(pkg.name), format: 'umd', sourcemap: true },
+      { file: pkg.main, format: 'cjs', sourcemap: true },
       { file: pkg.module, format: 'es', sourcemap: true },
+      { file: pkg.browser, format: 'umd', sourcemap: true, name: camelCase(pkg.name) },
     ],
     // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
     external,
