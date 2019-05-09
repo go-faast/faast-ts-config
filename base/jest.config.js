@@ -15,7 +15,7 @@ module.exports = {
     'js'
   ],
   'moduleNameMapper': {
-    '#/(.*)': '<rootDir>/src/$1'
+    '^#/(.*)': '<rootDir>/src/$1'
   },
   'coveragePathIgnorePatterns': [
     '/node_modules/',
