@@ -19,7 +19,7 @@
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "docs": "typedoc --options typedoc.js",
     "prebuild": "rimraf dist",
-    "build": "tsc --build ./tsconfig.build.json && rollup -c rollup.config.ts && npm run docs",
+    "build": "tsc --build ./tsconfig.build.json && rollup -c rollup.config.js && npm run docs",
     "start": "rollup -c rollup.config.ts -w",
     "pretest": "npm run lint",
     "test": "jest --runInBand --detectOpenHandles",
