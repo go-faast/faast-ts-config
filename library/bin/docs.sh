@@ -3,10 +3,11 @@
 set -e
 
 if [ $# -lt 1 ]; then
-  echo "Usage: docs.sh <project_root_dir>"
+  echo "Usage: docs.sh <project_root_dir> [...<typedoc_args>]"
   exit 1
 fi
 ROOT_DIR="$1"
+shift
 LIB_DIR="$(dirname $0)/.."
 NM_BIN="$ROOT_DIR/node_modules/.bin"
 
@@ -18,4 +19,4 @@ if [ ! -f "$OPTIONS" ]; then
 fi
 
 echo ">> typedoc"
-"$NM_BIN/typedoc" --options "$OPTIONS"
+echo "$NM_BIN/typedoc" --options "$OPTIONS" "$@"

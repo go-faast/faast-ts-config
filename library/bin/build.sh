@@ -33,6 +33,7 @@ echo ">> rollup"
 if [ "$NO_DOCS" != '1' ]; then
   DOCS_SH="$ROOT_DIR/bin/docs.sh"
   if [ ! -f "$DOCS_SH" ]; then
+    echo "Using default docs.sh from @faast/ts-config/bin"
     DOCS_SH="$LIB_DIR/bin/docs.sh"
   fi
   "$DOCS_SH" "$ROOT"
