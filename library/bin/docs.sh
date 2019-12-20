@@ -19,4 +19,4 @@ if [ ! -f "$OPTIONS" ]; then
 fi
 
 echo ">> typedoc"
-echo "$NM_BIN/typedoc" --options "$OPTIONS" "$@"
+"$NM_BIN/typedoc" --options "$OPTIONS" "$@"
