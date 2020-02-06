@@ -12,7 +12,9 @@ module.exports = {
   'moduleFileExtensions': [
     'ts',
     'tsx',
-    'js'
+    'js',
+    'jsx',
+    'json'
   ],
   'moduleNameMapper': {
     '^#/(.*)': '<rootDir>/src/$1'
