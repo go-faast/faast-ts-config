@@ -9,7 +9,7 @@
       "options": [120]
     },
     "quotemark": [true, "single", "jsx-single", "avoid-escape", "avoid-template"],
-    "semicolon": false,
+    "semicolon": [true, "never"],
     "ordered-imports": false,
     "comment-format": {
       "severity": "warning"
