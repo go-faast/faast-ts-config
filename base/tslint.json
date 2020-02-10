@@ -38,7 +38,8 @@
         "trace"
       ]
     },
-    "await-promise": [true, "Bluebird", "Thenable"]
+    "await-promise": [true, "Bluebird", "Thenable"],
+    "no-return-await": false
   }
 }
 
